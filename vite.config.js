@@ -24,7 +24,7 @@ export default defineConfig({
         tailwindcss(),
         {
             name: 'twig-php-reload',
-            handleHotUpdate({ file, server }) {
+            handleHotUpdate ({ file, server }) {
                 if (file.endsWith('.twig')) {
                     console.log('Reloading due to change in:', file);
                     server.ws.send({
@@ -39,7 +39,8 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                app: "./assets/app.js"
+                app: "./assets/app.js",
+                theme: "./assets/app.css"
             },
         }
     },
