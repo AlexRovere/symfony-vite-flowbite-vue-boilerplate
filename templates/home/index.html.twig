@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="flex flex-col h-full" {{ vue_component('Hello', { 'propsFromTwig': propsFromTwig  }) }}></div>
+{% endblock %}
